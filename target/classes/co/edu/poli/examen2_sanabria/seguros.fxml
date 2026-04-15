@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml"
+         fx:controller="co.edu.poli.examen2_sanabria.controlador.ControlFormSeguro"
+         tabClosingPolicy="UNAVAILABLE">
+
+    <tabs>
+
+        <Tab text="Asegurado">
+            <VBox spacing="12" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <Label text="Registro de Asegurado"/>
+                <TextField fx:id="txtId" promptText="ID del asegurado"/>
+                <TextField fx:id="txtNombre" promptText="Nombre del asegurado"/>
+                <Button text="Guardar Asegurado" onAction="#guardarAsegurado"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Seguro Vida">
+            <VBox spacing="12" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <Label text="Registro de Seguro de Vida"/>
+                <TextField fx:id="txtNumeroVida" promptText="Número del seguro"/>
+                <TextField fx:id="txtFechaVida" promptText="Fecha de expedición (YYYY-MM-DD)"/>
+                <TextField fx:id="txtEstadoVida" promptText="Estado"/>
+                <TextField fx:id="txtIdAseguradoVida" promptText="ID del asegurado"/>
+                <TextField fx:id="txtBeneficiario" promptText="Beneficiario"/>
+                <Button text="Guardar Seguro Vida" onAction="#guardarSeguroVida"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Seguro Vehículo">
+            <VBox spacing="12" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <Label text="Registro de Seguro de Vehículo"/>
+                <TextField fx:id="txtNumeroVehiculo" promptText="Número del seguro"/>
+                <TextField fx:id="txtFechaVehiculo" promptText="Fecha de expedición (YYYY-MM-DD)"/>
+                <TextField fx:id="txtEstadoVehiculo" promptText="Estado"/>
+                <TextField fx:id="txtIdAseguradoVehiculo" promptText="ID del asegurado"/>
+                <TextField fx:id="txtMarca" promptText="Marca del vehículo"/>
+                <Button text="Guardar Seguro Vehículo" onAction="#guardarSeguroVehiculo"/>
+            </VBox>
+        </Tab>
+
+        <Tab text="Consultar">
+            <VBox spacing="12" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <Label text="Consulta de Seguro por Número"/>
+                <TextField fx:id="txtBuscar" promptText="Ingrese el número del seguro"/>
+                <Button text="Buscar" onAction="#buscarSeguro"/>
+                <TextArea fx:id="txtResultado" prefHeight="220" wrapText="true" editable="false"/>
+            </VBox>
+        </Tab>
+
+    </tabs>
+</TabPane>
